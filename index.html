@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess game</title>
+</head>
+    <body>
+        <style>
+            #btn{
+                margin-top: 100px;
+            }
+            #zed{
+                margin-left: 20px;
+            }
+            input{
+                text-align: center;
+                margin-left: 13%;
+
+            }
+            #ik{
+                margin-left: 25%;
+            }
+            button{
+                margin-left: 36%;
+            }
+        </style>
+       <div id="container">
+            <input type="text" id="WHY" placeholder="Please Enter a number 🏃‍♀️">
+            <input type="text" id="zed">
+            <button onclick="guessIt()" id="btn">Guess</button>
+            &nbsp;
+            <p id="ik"></p>
+       </div>
+    
+    </body>
+    <script>
+        let text = document.getElementById('WHY')
+        let display1 = document.getElementById('zed')
+
+        let randomPicked = Number((Math.random()*92).toFixed(0))
+        // console.log(randomPicked)
+        display1.value = randomPicked
+        let message = document.getElementById('ik')
+        let butt = document.getElementById('btn')
+        let contain = document.getElementById('container')
+        message.style.backgroundColor = "lightblue"
+        message.style.color = "white"
+        message.style.width = "300px"
+        message.style.height = "40px"
+        message.style.padding = "20px"
+        message.style.fontSize = "30px"
+        message.style.borderRadius = "30px"
+        text.style.borderRadius = "20px"
+        text.style.height = "40px"
+        text.style.width = "250px"
+        text.style.outline = "none"
+        text.style.border = "none"
+        text.style.fontSize = "15px"
+        text.style.boxShadow = "0px 10px 5px lightblue"
+        // text.style.marginTop = "50px"
+        display1.style.height = "40px"
+        display1.style.width = "250px"
+        display1.style.outline = "none"
+        display1.style.border = "none"
+        display1.style.borderRadius = "20px"
+        display1.style.fontSize = "18px"
+        display1.style.boxShadow = "0px 10px 5px lightblue "
+        // display1.style.marginTop = "50px"
+        btn.style.display = "block"
+        btn.style.width = "130px"
+        btn.style.height = "70px"
+        btn.style.padding = "20px"
+        btn.style.fontSize = "30px"
+        btn.style.border = "none"
+        btn.style.boxShadow = "0px 10px 5px white"
+        btn.style.color = "peru"
+        contain.style.margin = "auto"
+        contain.style.borderTop = "2px solid peru"
+        contain.style.width = "700px"
+        contain.style.height = "400px"
+        contain.style.padding = "50px"
+        contain.style.boxShadow = "0px 5px 2px peru"
+
+
+
+        function guessIt(){
+            if( WHY.value == randomPicked){
+             message.innerText = "CORRECT 🙌👌👌"
+            console.log('you correct 👌')
+            }else if(text.value !== randomPicked){
+             message.innerText = "ERORR 🙄🙄🙄"
+            }
+            
+        }
+
+        
+
+    //     let text = document.getElementById('input')
+       
+    // function guessIt(){
+    //     if ( text >= 8 ){
+    //         alert('hurray you gat this 🙌🤦‍♀️')
+    //     }else if( text >= 4 ){
+    //         alert('hurray you gat this 🙌')
+
+    //     }else if( text >= 0){
+    //         alert('oops! you miss this 🤦‍♀️')
+
+    //     }else if( text >= 2){
+    //         alert('oops! you miss this 🤦‍♀️')
+
+    //     }else{
+    //         alert('refresh your page 🤦‍♀️')
+
+    //     }
+    // }
+    </script>
+</html>
